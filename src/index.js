@@ -21,6 +21,7 @@ function onCountryName(event) {
       .then(renderCountryList)
       .then()
       .catch(error => {
+        renderCountryList('');
         Notiflix.Notify.failure('Oops, there is no country with that name');
       });
   } else renderCountryList(searchCountryName);
@@ -57,6 +58,7 @@ function renderCountryList(users) {
   }
 
   if (users.length === 1) {
+    Notiflix.Notify.success('One match found for your search');
     const markup = users
       .map(user => {
         return `<p class="country-title">
