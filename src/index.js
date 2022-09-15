@@ -30,7 +30,7 @@ function onCountryName(event) {
 function renderCountryList(users) {
   //   console.log('Кол-во стран ==> ', users.length);
   if (users.length === 0) {
-    Notiflix.Notify.warning('Enter letters from ciuntry name');
+    // Notiflix.Notify.warning('Enter letters from ciuntry name');
     const markup = `<p class="country-title"> </p>`;
     countryList.innerHTML = markup;
     return;
